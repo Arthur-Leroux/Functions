@@ -27,10 +27,37 @@ function hello2(name) {
 }
 hello2("gringo2");
 
-//FONCTIONS AVEC PLUSIEURS PARAMÈTRES
+//FONCTIONS AVEC PLUSIEURS PARAMÈTRES AVEC RETOUR DE VALEUR
 
 function additions(a, b) {
   return a + b;
 }
 const resultat = additions(5, 7);
-console.log('Le résultat est ' + resultat);
+console.log("Le résultat est " + resultat);
+
+//================================
+
+//ASYNC, CALLBACKS, PROMISE
+
+//LE CODE S'AFFICHE À LA SUITE
+
+console.log("Planter du maïs");
+console.log("Arroser les plantes");
+console.log("Ajouter du fertilisant");
+
+// ASYNC "BONNE APPÉTIT" 3 SECONDES PLUS TARD
+
+console.log("Mettre les ingrédients");
+
+setTimeout(function(){
+    console.log("Bonne appétit")
+
+},3000);
+
+console.log("Manger les faritas");
+
+//================================
+
+
+
+
