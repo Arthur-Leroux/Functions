@@ -67,3 +67,16 @@ setTimeout(function () {
   });
 }, 2000);
 //console.log(newList);
+
+// CALLBACK NOMMÉE
+setTimeout(function () {
+  function helloName(name) {
+    console.log(`je m'appelle ${name}`);
+  }
+  function introduction(name, lastName, callback) {
+    const completedName = `${name} ${lastName}`;
+    callback(completedName);
+  }
+
+  introduction("Alexandre", "Grouyou", helloName);
+}, 3000);
