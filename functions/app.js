@@ -71,12 +71,48 @@ setTimeout(function () {
 // CALLBACK NOMMÉE
 setTimeout(function () {
   function helloName(name) {
-    console.log(`je m'appelle ${name}`);
+    console.log(`Je suis une fonction ${name}`);
   }
   function introduction(name, lastName, callback) {
     const completedName = `${name} ${lastName}`;
     callback(completedName);
   }
 
-  introduction("Alexandre", "Grouyou", helloName);
+  introduction(
+    "callback et j'utilise",
+    "setTimeout pour apparaitre ! ",
+    helloName
+  );
 }, 3000);
+
+//================================
+
+// PROMISE
+
+const myDate = function() {
+    Date
+      .then(function(done) {
+        console.log('On a un rendez vous ! Whaouuuu')
+        console.log(done)
+      })
+      .catch(function(error) {
+          console.log(error.message)
+      })
+  }
+  console.log(Date);
+  myDate();
+
+
+const date = new Promise((resolve, reject) => {
+  const weather = true;
+  if (weather) {
+    const dateDetails = {
+      location: 'le restaurant "la fourchette"',
+      time: "14H30",
+      table: 5,
+    };
+    resolve(dateDetails);
+  } else {
+    reject(new Error("il fera pas beau, donc pas de restaurant"));
+  }
+});
