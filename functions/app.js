@@ -51,7 +51,7 @@ console.log("Mettre les ingrédients");
 
 setTimeout(function () {
   console.log("Bonne appétit");
-}, 3000);
+}, 1000);
 
 console.log("Manger les faritas");
 
@@ -59,11 +59,11 @@ console.log("Manger les faritas");
 
 //Lorsqu’une fonction accepte simplement une autre fonction comme argument,
 // cette fonction contenue est appelée callback.
-setTimeout(function(){
-const list = ["chaton, chiot, salamandre"];
+setTimeout(function () {
+  const list = ["chaton, chiot, salamandre"];
 
-const newList = list.map(function (val) {
-  console.log( "animal mignon : " + val);
-});
-},4000);
+  const newList = list.map(function (val) {
+    console.log("animal mignon : " + val);
+  });
+}, 2000);
 //console.log(newList);
