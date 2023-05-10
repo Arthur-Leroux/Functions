@@ -49,15 +49,21 @@ console.log("Ajouter du fertilisant");
 
 console.log("Mettre les ingrédients");
 
-setTimeout(function(){
-    console.log("Bonne appétit")
-
-},3000);
+setTimeout(function () {
+  console.log("Bonne appétit");
+}, 3000);
 
 console.log("Manger les faritas");
 
-//================================
+//CALLBACKS
 
+//Lorsqu’une fonction accepte simplement une autre fonction comme argument,
+// cette fonction contenue est appelée callback.
+setTimeout(function(){
+const list = ["chaton, chiot, salamandre"];
 
-
-
+const newList = list.map(function (val) {
+  console.log( "animal mignon : " + val);
+});
+},4000);
+//console.log(newList);
